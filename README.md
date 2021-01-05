@@ -12,7 +12,7 @@ Creates a Kubernetes Job to run database migrations.
 Download the script and apply the execution permissions:
 
 ```bash
-curl -L https://github.com/speedyrails/database-migration-job-kubernetes/raw/master/db-migration-job.sh -o db-migration-job.sh
+curl -L https://github.com/speedyrails/database-migration-job-kubernetes/raw/main/db-migration-job.sh -o db-migration-job.sh
 chmod +x db-migration-job.sh
 ```
 
