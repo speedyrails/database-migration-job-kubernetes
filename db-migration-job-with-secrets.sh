@@ -21,7 +21,7 @@ RANDOM_ID=$(tr -cd a-z0-9 < /dev/urandom | fold -w8 | head -n1)
 JOB_NAME="db-migration-${RANDOM_ID}"
 
 # Migration Timeout in seconds
-MIGRATION_TIMEOUT="${5:-"600"}"
+MIGRATION_TIMEOUT="${5:-"1200"}"
 
 ## Check arguments
 if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ]; then
