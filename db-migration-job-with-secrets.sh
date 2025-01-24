@@ -117,11 +117,11 @@ kubectl logs "$DATA_MIGRATION_POD_ID" --since=1h
 JOB_STATUS=$(kubectl get job "${JOB_NAME}" --no-headers -o custom-columns=":status.conditions[0].type")
 
 if [ "$JOB_STATUS" = "Complete" ]; then
-    echo "The database migration process is completed!!!"
+    echo "The database migration process is completed!!! Job Status: ${JOB_STATUS}"
     kubectl delete job "${JOB_NAME}"
     exit 0
 else
-    echo "The database migration process has failed!!!"
+    echo "The database migration process has failed!!!  Job Status: ${JOB_STATUS}"
     kubectl delete job "${JOB_NAME}"
     exit 1
 fi
