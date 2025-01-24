@@ -118,10 +118,10 @@ JOB_STATUS=$(kubectl get job "${JOB_NAME}" --no-headers -o custom-columns=":stat
 
 if [ "$JOB_STATUS" = "Complete" ]; then
     echo "The database migration process is completed!!! Job Status: ${JOB_STATUS}"
-    kubectl delete job "${JOB_NAME}"
+    # kubectl delete job "${JOB_NAME}"
     exit 0
 else
     echo "The database migration process has failed!!!  Job Status: ${JOB_STATUS}"
-    kubectl delete job "${JOB_NAME}"
+    # kubectl delete job "${JOB_NAME}"
     exit 1
 fi
